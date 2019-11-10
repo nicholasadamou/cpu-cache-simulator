@@ -35,4 +35,4 @@ Once you start the simulator, you can enter commands to modify and read from the
 
 Here is an example run:
 
-[![asciicast](https://asciinema.org/a/oeGGT2yAdvUL5aG3K1ezvrb5r.svg)](https://asciinema.org/a/oeGGT2yAdvUL5aG3K1ezvrb5r)
+[![asciicast](https://asciinema.org/a/280260.svg)](https://asciinema.org/a/280260)
