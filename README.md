@@ -35,8 +35,7 @@ Once you start the simulator, you can enter commands to modify and read from the
 
 Here is an example run:
 
-[![asciicast](https://asciinema.org/a/280260.svg)](https://asciinema.org/a/280260)
-
+[![asciicast](https://asciinema.org/a/yWHC0yPP8ImpVNduDCCoy2XVD.svg)](https://asciinema.org/a/yWHC0yPP8ImpVNduDCCoy2XVD)
 
 ## License
 
