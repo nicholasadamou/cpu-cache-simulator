@@ -172,26 +172,13 @@ class Simulator:
                 self.cache.load(address, block)
                 self.cache.write(address, byte)
 
-                print()
-                print("Byte 0x%s (%s) written to block %s @ %s in cache\n" % (
-                        util.hex_str(byte, 2),
-                        byte,
-                        block,
-                        util.bin_str(address, self.memory_size)
-                    )
+            print()
+            print("Byte 0x%s (%s) written @ %s in cache\n" % (
+                    util.hex_str(byte, 2),
+                    byte,
+                    util.bin_str(address, self.memory_size)
                 )
-            else:
-                # address was already previously written too,
-                # simply overriding current value held @ that
-                # address
-
-                print()
-                print("Byte 0x%s (%s) written @ %s in cache\n" % (
-                        util.hex_str(byte, 2),
-                        byte,
-                        util.bin_str(address, self.memory_size)
-                    )
-                )
+            )
 
     def print_details(self):
         """
