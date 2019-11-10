@@ -1,6 +1,6 @@
 # cpu-cache-simulator
 
-This is a simulator for a CPU cache that I wrote for a college course. It's
+This is a simulator for a CPU cache that I wrote for CSC 218 Computer Organization. It's
 meant to demonstrate some of the different
 [replacement](https://en.wikipedia.org/wiki/CPU_cache#Replacement_policies),
 [write](https://en.wikipedia.org/wiki/CPU_cache#Write_policies), and [mapping
@@ -35,4 +35,4 @@ Once you start the simulator, you can enter commands to modify and read from the
 
 Here is an example run:
 
-[![asciicast](https://asciinema.org/a/FBHHNWw2LwPwguzKLuRAU1BEd.svg)](https://asciinema.org/a/FBHHNWw2LwPwguzKLuRAU1BEd)
+[![asciicast](https://asciinema.org/a/oeGGT2yAdvUL5aG3K1ezvrb5r.svg)](https://asciinema.org/a/oeGGT2yAdvUL5aG3K1ezvrb5r)

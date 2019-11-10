@@ -240,7 +240,7 @@ class Simulator:
 if __name__ == '__main__':
     custom_fig = Figlet(font='slant')
     print(custom_fig.renderText('cpu cache simulator'))
-    print("This is a simulator for a CPU cache that I wrote for a college course.\n" +
+    print("This is a simulator for a CPU cache that I wrote for CSC 218 Computer Organization.\n" +
           "It's meant to demonstrate some of the different replacement, write, \n" +
           "and mapping policies that CPUs can implement.\n")
 
