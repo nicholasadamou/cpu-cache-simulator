@@ -5,7 +5,7 @@ See README.md or https://github.com/nicholasadamou/cpu-cache-simulator
 for more information.
 
 Copyright (C) Nicholas Adamou 2019
-stockmine is released under the Apache 2.0 license. See
+cpu-cache-simulator is released under the Apache 2.0 license. See
 LICENSE for the full license text.
 """
 
