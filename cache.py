@@ -180,7 +180,7 @@ class Cache:
                     util.bin_str(self.lines[i].tag, tag_len),
                     " ".join(
                         [
-                            util.hex_str(i, 2) for i in self.lines[i].data
+                            util.hex_str(j, 2) for j in self.lines[i].data
                         ]
                     ),
                     util.bin_str(self.get_physical_address(i), address_len)

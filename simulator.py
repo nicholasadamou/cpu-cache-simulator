@@ -159,7 +159,7 @@ class Simulator:
             print("Byte 0x%s (%s) written to block %s @ %s in main memory\n" % (
                     util.hex_str(byte, 2),
                     byte,
-                    block,
+                    self.memory.get_block(address),
                     util.bin_str(address, self.memory_size)
                 )
             )

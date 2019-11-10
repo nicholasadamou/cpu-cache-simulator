@@ -97,7 +97,7 @@ class Memory:
                     util.dec_str(i, address_length),
                     " ".join(
                         [
-                            util.hex_str(i, 2) for _ in self.get_block(i)
+                            util.hex_str(j, 2) for j in self.get_block(i)
                         ]
                     )
                 )
