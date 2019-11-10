@@ -219,7 +219,7 @@ class Simulator:
         print()
 
         print("Policies")
-        print("Mapping policy: %s" % ("direct" if self.mapping_policy == 1 else mapping_str))
+        print("Mapping policy: %s" % ("direct" if self.mapping_policy == 0 else mapping_str))
         print("Replacement policy: %s" % self.replacement_policy)
         print("Write policy: %s" % self.write_policy)
         print()
