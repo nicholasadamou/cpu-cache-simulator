@@ -168,7 +168,7 @@ class Cache:
         if start < 0 or (start + amount) > (self.size // self.block_size):
             raise IndexError
 
-        print("\n" + " " * line_len + " " * use_len + "  U M V T" + " " * tag_len + "<DATA @ ADDRESS>")
+        print("\n" + " " * line_len + " " * use_len + " U M V  T" + " " * tag_len + "<DATA @ ADDRESS>")
         for i in range(start, start + amount):
             print(
                 "%s : %s %s %s %s <%s @ %s>" %
