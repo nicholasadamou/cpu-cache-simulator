@@ -17,9 +17,9 @@ Once you start the simulator, you can enter commands to modify and read from the
 
 ## Commands
 
-**read** ADDRESS - read byte from memory
+**read** ADDRESS - read byte from memory (byte must be an int)
 
-**write** ADDRESS BYTE - write random byte to memory
+**write** ADDRESS BYTE - write random byte to memory (byte must be an int)
 
 **printcache** START LENGTH - print LENGTH lines of cache from START
 
