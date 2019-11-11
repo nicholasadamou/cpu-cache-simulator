@@ -1,4 +1,24 @@
-# cpu-cache-simulator
+<h1 align="center">
+  <br>
+  <a href="https://github.com/nicholasadamou/cpu-cache-simulator"><img src="https://cdn1.iconfinder.com/data/icons/modern-future-technology/128/computer-chip2-2-512.png" alt="Logo" width="15%"></a>
+  <br>
+  cpu-cache-simulator
+  <br>
+</h1>
+
+<p align="center">
+	<img src="https://img.shields.io/badge/Course-Assignment-blue" alt="Course Project" />
+    <a href="https://github.com/nicholasadamou/cpu-cache-simulator/blob/master/LICENSE">
+        <img src="https://img.shields.io/badge/license-Apachev2-blue" alt="Course Project" />
+    </a>
+    <a href="https://saythanks.io/to/NicholasAdamou">
+        <img src="https://img.shields.io/badge/say-thanks-ff69b4.svg" alt="Say Thanks">
+    </a>
+</p>
+
+---
+
+## 🤔 What is '_cpu-cache-simulator_'?
 
 This is a simulator for a CPU cache that I wrote for CSC 218 Computer Organization. It's
 meant to demonstrate some of the different
