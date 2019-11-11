@@ -6,6 +6,8 @@
   <br>
 </h1>
 
+<h4 align="center">A python-based simulator for a CPU cache that I wrote for <em>CSC 218 Computer Organization</em></h4>
+
 <p align="center">
 	<img src="https://img.shields.io/badge/Course-Assignment-blue" alt="Course Project" />
     <a href="https://github.com/nicholasadamou/cpu-cache-simulator/blob/master/LICENSE">
