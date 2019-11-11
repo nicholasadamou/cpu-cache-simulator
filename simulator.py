@@ -82,7 +82,7 @@ class Simulator:
                     byte = self.read(address)
 
                     print(
-                        "\nByte 0x%s (%s) read from %s cache\n" % (
+                        "\nByte 0x%s (%s) read from %s in cache\n" % (
                             util.hex_str(byte, 2),
                             byte,
                             util.bin_str(address, self.memory_size)
@@ -214,8 +214,8 @@ class Simulator:
         print(
             "Commands\n" +
             "usage: COMMAND PARAM PARAM\n\n" +
-            "write ADDRESS BYTE - write byte from memory (byte must be an integer)\n" +
-            "read ADDRESS - read byte from memory (byte must be an integer)\n" +
+            "write ADDRESS BYTE - write byte from memory (ADDRESS must be in HEX, BYTE must be an integer)\n" +
+            "read ADDRESS - read byte from memory (ADDRESS must be in HEX)\n" +
             "printcache START LENGTH - print LENGTH lines of cache from START\n" +
             "printmem START LENGTH - print LENGTH blocks of memory from START\n" +
             "stats - print out hits, misses, and hit/miss ratio\n" +
