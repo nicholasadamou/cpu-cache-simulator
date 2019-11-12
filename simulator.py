@@ -8,6 +8,7 @@ Copyright (C) Nicholas Adamou 2019
 cpu-cache-simulator is released under the Apache 2.0 license. See
 LICENSE for the full license text.
 """
+import re
 
 from pyfiglet import Figlet
 
@@ -72,13 +73,27 @@ class Simulator:
                 params = operation[1:]
 
                 if command == 'write' and len(params) == 2:
-                    address = int(params[0])
-                    byte = int(params[1])
+                    address = params[0]
+
+                    # Make sure address is in binary and is the correct length
+                    if set(address) <= set('01') and len(address) == int(log(self.memory.get_size(), 2)):
+                        address = int(params[0])
+
+                    byte = params[1]
+
+                    # Make sure byte is a digit
+                    if byte.isdigit():
+                        byte = int(params[1])
 
                     self.write(address, byte)
 
                 elif command == 'read' and len(params) == 1:
-                    address = int(params[0])
+                    address = params[0]
+
+                    # Make sure address is in binary and is the correct length
+                    if set(address) <= set('01') and len(address) == int(log(self.memory.get_size(), 2)):
+                        address = int(params[0])
+
                     byte = self.read(address)
 
                     print(
@@ -213,9 +228,12 @@ class Simulator:
 
         print(
             "Commands\n" +
-            "usage: COMMAND PARAM PARAM\n\n" +
-            "write ADDRESS BYTE - write byte from memory (ADDRESS, BYTE must be an integer)\n" +
-            "read ADDRESS - read byte from memory (ADDRESS must be an integer)\n" +
+            "usage: COMMAND PARAM PARAM\n" +
+            "* ADDRESS must be in binary and be " + str(int(log(self.memory.get_size(), 2))) + " digits long\n" +
+            "* BYTE must be an integer\n\n"
+            
+            "write ADDRESS BYTE - write byte from memory\n" +
+            "read ADDRESS - read byte from memory\n" +
             "printcache START LENGTH - print LENGTH lines of cache from START\n" +
             "printmem START LENGTH - print LENGTH blocks of memory from START\n" +
             "stats - print out hits, misses, and hit/miss ratio\n" +
