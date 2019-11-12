@@ -37,28 +37,28 @@ python3 simulator.py
 
 Once you start the simulator, you can enter commands to modify and read from the memory (which is randomized on initialization), and therefore indirectly modify the cache. You can also print the contents of the memory and cache, as well as view statistics about the cache's performance.
 
-## Commands
+### Usage
 
-**read** ADDRESS - read byte from memory (byte must be an int)
+```shell script
+Commands
+usage: COMMAND PARAM PARAM
+* ADDRESS must be in binary and be 10 digits long
+* BYTE must be an integer
 
-**write** ADDRESS BYTE - write random byte to memory (byte must be an int)
-
-**printcache** START LENGTH - print LENGTH lines of cache from START
-
-**printmem** START LENGTH - print LENGTH blocks of memory from START
-
-**stats** - print out hits, misses, and hit/miss ratio
-
-**help** - prints out this list of commands as well as simulation details
-
-**quit** - quit the simulator
+write ADDRESS BYTE - write byte from memory
+read ADDRESS - read byte from memory
+printcache START LENGTH - print LENGTH lines of cache from START
+printmem START LENGTH - print LENGTH blocks of memory from START
+stats - print out hits, misses, and hit/miss ratio
+help - prints this message
+quit - quit the simulator
+```
 
 ## Example
 
 Here is an example run:
 
-[![asciicast](https://asciinema.org/a/hdSIiyETobky13pCOzzMwKjeV.svg)](https://asciinema.org/a/hdSIiyETobky13pCOzzMwKjeV)
-
+[![asciicast](https://asciinema.org/a/P8IJ4jmtI2pgHjrwytosiD70R.svg)](https://asciinema.org/a/P8IJ4jmtI2pgHjrwytosiD70R)
 ## License
 
 Copyright 2019 Nicholas Adamou
