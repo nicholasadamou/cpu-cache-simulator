@@ -214,8 +214,8 @@ class Simulator:
         print(
             "Commands\n" +
             "usage: COMMAND PARAM PARAM\n\n" +
-            "write ADDRESS BYTE - write byte from memory (ADDRESS must be in HEX, BYTE must be an integer)\n" +
-            "read ADDRESS - read byte from memory (ADDRESS must be in HEX)\n" +
+            "write ADDRESS BYTE - write byte from memory (ADDRESS, BYTE must be an integer)\n" +
+            "read ADDRESS - read byte from memory (ADDRESS must be an integer)\n" +
             "printcache START LENGTH - print LENGTH lines of cache from START\n" +
             "printmem START LENGTH - print LENGTH blocks of memory from START\n" +
             "stats - print out hits, misses, and hit/miss ratio\n" +
