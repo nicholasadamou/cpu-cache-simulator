@@ -42,7 +42,7 @@ Once you start the simulator, you can enter commands to modify and read from the
 ```shell script
 Commands
 usage: COMMAND PARAM PARAM
-* ADDRESS must be in binary and be 10 digits long
+* ADDRESS must be in binary and be the correct address length
 * BYTE must be an integer
 
 write ADDRESS BYTE - write byte from memory

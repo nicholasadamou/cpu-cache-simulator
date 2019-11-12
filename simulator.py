@@ -229,7 +229,7 @@ class Simulator:
         print(
             "Commands\n" +
             "usage: COMMAND PARAM PARAM\n" +
-            "* ADDRESS must be in binary and be " + str(int(log(self.memory.get_size(), 2))) + " digits long\n" +
+            "* ADDRESS must be in binary and be " + str(int(log(self.memory.get_size(), 2))) + " bits in length\n" +
             "* BYTE must be an integer\n\n"
             
             "write ADDRESS BYTE - write byte from memory\n" +
