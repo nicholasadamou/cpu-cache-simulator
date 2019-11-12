@@ -8,7 +8,6 @@ Copyright (C) Nicholas Adamou 2019
 cpu-cache-simulator is released under the Apache 2.0 license. See
 LICENSE for the full license text.
 """
-import re
 
 from pyfiglet import Figlet
 
