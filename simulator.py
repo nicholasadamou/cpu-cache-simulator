@@ -199,7 +199,7 @@ class Simulator:
         Print the details of the simulation.
         """
 
-        mapping_str = "2^%s-way set associative" % self.mapping_policy
+        mapping_str = "%s-way set associative" % 2 ** self.mapping_policy
         print()
         print("Main Memory")
         print("Memory size: %s bytes (%s blocks)" % (
