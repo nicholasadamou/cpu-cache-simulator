@@ -58,7 +58,8 @@ quit - quit the simulator
 
 Here is an example run:
 
-[![asciicast](https://asciinema.org/a/P8IJ4jmtI2pgHjrwytosiD70R.svg)](https://asciinema.org/a/P8IJ4jmtI2pgHjrwytosiD70R)
+[![asciicast](https://asciinema.org/a/yBonF6KRMPZqh4ggjjZkysrng.svg)](https://asciinema.org/a/yBonF6KRMPZqh4ggjjZkysrng)
+
 ## License
 
 Copyright 2019 Nicholas Adamou
