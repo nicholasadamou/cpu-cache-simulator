@@ -15,11 +15,6 @@ from math import log
 
 import util
 
-try:
-    import gnureadline as readline
-except ImportError:
-    import readline
-
 from cache import Cache
 from memory import Memory
 
