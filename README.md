@@ -42,11 +42,12 @@ Once you start the simulator, you can enter commands to modify and read from the
 ```shell script
 Commands
 usage: COMMAND PARAM PARAM
-* ADDRESS must be in binary and be the correct address length
-* BYTE must be an integer
+* ADDRESS, BYTE, & AMOUNT must be an integer
 
 write ADDRESS BYTE - write byte from memory
 read ADDRESS - read byte from memory
+randwrite AMOUNT - write random byte to random location in memory AMOUNT times
+randread AMOUNT - read byte from random location in memory AMOUNT times
 printcache START LENGTH - print LENGTH lines of cache from START
 printmem START LENGTH - print LENGTH blocks of memory from START
 stats - print out hits, misses, and hit/miss ratio
@@ -58,7 +59,7 @@ quit - quit the simulator
 
 Here is an example run:
 
-[![asciicast](https://asciinema.org/a/yBonF6KRMPZqh4ggjjZkysrng.svg)](https://asciinema.org/a/yBonF6KRMPZqh4ggjjZkysrng)
+[![asciicast](https://asciinema.org/a/YJhd8610I4Mmhyrl9vfLcwBTq.svg)](https://asciinema.org/a/YJhd8610I4Mmhyrl9vfLcwBTq)
 
 ## License
 
