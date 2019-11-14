@@ -8,6 +8,7 @@ Copyright (C) Nicholas Adamou 2019
 cpu-cache-simulator is released under the Apache 2.0 license. See
 LICENSE for the full license text.
 """
+import random
 
 from pyfiglet import Figlet
 
@@ -67,12 +68,7 @@ class Simulator:
                 params = operation[1:]
 
                 if command == 'write' and len(params) == 2:
-                    address = params[0]
-
-                    # Make sure address is in binary and is the correct length
-                    if set(address) <= set('01') and len(address) == int(log(self.memory.get_size(), 2)):
-                        address = int(params[0])
-
+                    address = int(params[0])
                     byte = params[1]
 
                     # Make sure byte is a digit
@@ -82,21 +78,36 @@ class Simulator:
                     self.write(address, byte)
 
                 elif command == 'read' and len(params) == 1:
-                    address = params[0]
-
-                    # Make sure address is in binary and is the correct length
-                    if set(address) <= set('01') and len(address) == int(log(self.memory.get_size(), 2)):
-                        address = int(params[0])
-
+                    address = int(params[0])
                     byte = self.read(address)
 
                     print(
                         "\nByte 0x%s (%s) read from %s in cache\n" % (
                             util.hex_str(byte, 2),
                             byte,
-                            util.bin_str(address, self.memory_size)
+                            util.bin_str(address, self.memory.get_size())
                         )
                     )
+
+                elif command == "randread" and len(params) == 1:
+                    amount = int(params[0])
+
+                    for i in range(amount):
+                        address = random.randint(0, self.memory.get_size() - 1)
+                        self.read(address)
+
+                    print(
+                        "\n%s bytes read from memory\n" %
+                        amount
+                    )
+
+                elif command == "randwrite" and len(params) == 1:
+                    amount = int(params[0])
+
+                    for i in range(amount):
+                        address = random.randint(0, self.memory.get_size() - 1)
+                        byte = util.rand_byte()
+                        self.write(address, byte)
 
                 elif command == "printcache" and len(params) == 2:
                     start = int(params[0])
@@ -178,8 +189,8 @@ class Simulator:
                 # Write block to cache
                 block = self.memory.get_block(address)
 
-                self.cache.load(address, block)
-                self.cache.write(address, byte)
+                victim = self.cache.load(address, block)
+                written = self.cache.write(address, byte)
 
             print()
             print("Byte 0x%s (%s) written @ %s in cache\n" % (
@@ -223,11 +234,12 @@ class Simulator:
         print(
             "Commands\n" +
             "usage: COMMAND PARAM PARAM\n" +
-            "* ADDRESS must be in binary and be " + str(int(log(self.memory.get_size(), 2))) + " bits in length\n" +
-            "* BYTE must be an integer\n\n"
+            "* ADDRESS, BYTE, & AMOUNT must be an integer\n\n"
             
             "write ADDRESS BYTE - write byte from memory\n" +
             "read ADDRESS - read byte from memory\n" +
+            "randwrite AMOUNT - write random byte to random location in memory AMOUNT times\n" +
+            "randread AMOUNT - read byte from random location in memory AMOUNT times\n" +
             "printcache START LENGTH - print LENGTH lines of cache from START\n" +
             "printmem START LENGTH - print LENGTH blocks of memory from START\n" +
             "stats - print out hits, misses, and hit/miss ratio\n" +

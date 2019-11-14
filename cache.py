@@ -142,6 +142,7 @@ class Cache:
         # Update the data of this cache line
         if line:
             line.data[self.get_offset(address)] = byte
+            line.modified = 1
 
             if self.replacement_policy == Cache.LRU or self.replacement_policy == Cache.LFU:
                 self.update_use(line, set)
@@ -168,15 +169,15 @@ class Cache:
         if start < 0 or (start + amount) > (self.size // self.block_size):
             raise IndexError
 
-        print("\n" + " " * line_len + " " * use_len + " U M V  T" + " " * tag_len + "<DATA @ ADDRESS>")
+        print("\n" + " " * line_len + " " * use_len + "  U M V  T" + " " * tag_len + "<DATA @ ADDRESS>")
         for i in range(start, start + amount):
             print(
                 "%s : %s %s %s %s <%s @ %s>" %
                 (
+                    util.dec_str(i, line_len),
                     util.dec_str(self.lines[i].use, use_len),
                     util.bin_str(self.lines[i].modified, 1),
                     util.bin_str(self.lines[i].valid, 1),
-                    util.dec_str(i, line_len),
                     util.bin_str(self.lines[i].tag, tag_len),
                     " ".join(
                         [
@@ -198,8 +199,11 @@ class Cache:
 
         set_number = index // self.mapping_policy
 
+        tag = self.lines[index].tag << self.tag_offset
+        set = set_number << self.set_offset
+
         return (
-            (self.lines[index].tag << self.tag_offset) + (set_number << self.set_offset)
+            tag + set
         )
 
     def get_offset(self, address):
