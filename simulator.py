@@ -234,7 +234,7 @@ class Simulator:
         print(
             "Commands\n" +
             "usage: COMMAND PARAM PARAM\n" +
-            "* ADDRESS, BYTE, & AMOUNT must be an integer\n\n"
+            "* ADDRESS, BYTE, AMOUNT, START, & LENGTH must be an integer\n\n"
             
             "write ADDRESS BYTE - write byte from memory\n" +
             "read ADDRESS - read byte from memory\n" +

@@ -37,7 +37,9 @@ class Memory:
         if start < 0 or end > self.size:
             raise IndexError
 
-        return self.data[start:end]
+        block = self.data[start:end]
+
+        return block
 
     def set_block(self, address, data):
         """

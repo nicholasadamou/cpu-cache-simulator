@@ -42,7 +42,7 @@ Once you start the simulator, you can enter commands to modify and read from the
 ```shell script
 Commands
 usage: COMMAND PARAM PARAM
-* ADDRESS, BYTE, & AMOUNT must be an integer
+* ADDRESS, BYTE, AMOUNT, START, & LENGTH must be an integer
 
 write ADDRESS BYTE - write byte from memory
 read ADDRESS - read byte from memory
