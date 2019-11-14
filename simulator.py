@@ -85,7 +85,7 @@ class Simulator:
                         "\nByte 0x%s (%s) read from %s in cache\n" % (
                             util.hex_str(byte, 2),
                             byte,
-                            util.bin_str(address, self.memory.get_size())
+                            util.bin_str(address, self.memory_size)
                         )
                     )
 
